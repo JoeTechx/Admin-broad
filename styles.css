@@ -155,7 +155,7 @@ aside .sidebar {
   top: 3rem;
 }
 
-aside .h3 {
+aside h3 {
   font-weight: 500;
 }
 
@@ -171,7 +171,7 @@ aside .sidebar a {
 }
 
 aside .sidebar a,
-.add-product i {
+.add-product, .close i {
   font-size: 1.6rem;
   transition: all 300ms ease;
 }
@@ -205,7 +205,7 @@ aside .sidebar a:hover {
 }
 
 aside .sidebar a:hover i {
-  margin-left: 1.23rem;
+  margin-left: 3rem;
 }
 
 aside .sidebar .message-count {
@@ -521,7 +521,7 @@ main .recent-orders a {
 /* ======================= END OF RIGHT ============================= */
 
 
-/* ======================= MEDIA QUERIES ============================= */
+/* ======================= SMALL LAPTOP MEDIA QUERIES ============================= */
 @media screen and (max-width: 1200px) {
   .container{
     width: 94%;
@@ -558,7 +558,111 @@ main .recent-orders{
   transform: translateX(-50%);
   margin: 2rem 0 0 8.8rem;
 }
+
+main .recent-orders table{
+  width: 83vw;
+}
+
+main table thead tr th:last-child,
+main table thead tr th:first-child{
+  display: none;
+}
+main table tbody tr td:last-child,
+main table tbody tr td:first-child{
+  display: none;
+}
 /* ====================== END OF RECENT ORDER ==================== */
 
 }
-/* ======================= END OF MEDIA QUERIES ========================= */
+/* ======================= END OF SMALL LAPTOP MEDIA QUERIES ========================= */
+
+
+/* ======================= SMALL TABLETS MEDIA QUERIES ========================= */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  aside {
+    position: fixed;
+    left: 0;
+    background: var(--color-white);
+    width: 18rem;
+    z-index: 3;
+    box-shadow: 1rem 3rem 4rem var(--color-light);
+    height: 100vh;
+    padding-right: var(--card-padding);
+    display: none;
+  }
+
+aside .logo{
+  margin-left: 1rem;
+}
+
+aside .logo h2{
+  display: inline;
+}
+
+aside .sidebar h3{
+  display: inline;
+}
+
+aside .sidebar a{
+  width: 100%;
+  height: 3.4rem;
+}
+
+aside .sidebar a:last-child{
+  position: absolute;
+  bottom: 5rem;
+}
+
+aside .close{
+  display: inline-block;
+  cursor: pointer;
+}
+
+main {
+  margin-top: 8rem;
+  padding: 0 1rem;
+}
+
+main .recent-orders{
+  position: relative;
+  margin: 3rem 0 0 0;
+  width: 100%;
+}
+
+main .recent-orders table{
+  width: 100%;
+  margin: 0;
+}
+
+.right {
+  width: 94%;
+  margin: 0 auto 4rem;
+}
+
+.right .top{
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  padding: 0 0 8rem;
+  height: 4.6rem;
+  background: var(--color-white);
+  width: 100%;
+  margin: 0;
+  z-index: 2;
+  box-shadow: 0 1rem 1rem var(--color-light);
+}
+
+.right .top .theme-toggler{
+  width: 4.4rem;
+  position: absolute;
+  left: 66%;
+}
+}
+
+
+/* ======================= END OF SMALL TABLETS MEDIA QUERIES ========================= */
