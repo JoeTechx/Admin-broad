@@ -519,3 +519,46 @@ main .recent-orders a {
 /* ======================= END OF SALES ANALYTICS ============================= */
 
 /* ======================= END OF RIGHT ============================= */
+
+
+/* ======================= MEDIA QUERIES ============================= */
+@media screen and (max-width: 1200px) {
+  .container{
+    width: 94%;
+    grid-template-columns: 7rem auto 23rem;
+  }
+  /* ======================= ASIDE ============================= */
+  aside .logo h2{
+    display: none;
+  }
+  
+  aside .sidebar h3{
+    display: none;
+  }
+  
+aside .sidebar a{
+  width: 5.6rem;
+}
+aside .sidebar a:last-child{
+  position: relative;
+  margin-top: 2.8rem;
+}
+/* ======================= END OF ASIDE ============================= */
+/* ======================= MAIN ============================= */
+main .insights{
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+/* ======================= END OF MAIN ============================= */
+/* ====================== RECENT ORDER ==================== */
+main .recent-orders{
+  width: 94%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 2rem 0 0 8.8rem;
+}
+/* ====================== END OF RECENT ORDER ==================== */
+
+}
+/* ======================= END OF MEDIA QUERIES ========================= */
