@@ -26,6 +26,15 @@
   --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
+/* ================= DARK THEME VARIABLES =========================== */
+.dark-theme-Variables{
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
 * {
   margin: 0;
   padding: 0;
@@ -178,7 +187,7 @@ aside .sidebar a,
 
 aside .sidebar a:last-child {
   position: absolute;
-  bottom: 2rem;
+  bottom: 0.1rem;
   width: 100%;
 }
 
@@ -532,6 +541,11 @@ main .recent-orders a {
     display: none;
   }
   
+  aside .logo img {
+    width: 3rem;
+    height: 3rem;
+  }
+
   aside .sidebar h3{
     display: none;
   }
@@ -586,7 +600,7 @@ main table tbody tr td:first-child{
   
   aside {
     position: fixed;
-    left: 0;
+    left: -110%;
     background: var(--color-white);
     width: 18rem;
     z-index: 3;
@@ -594,6 +608,13 @@ main table tbody tr td:first-child{
     height: 100vh;
     padding-right: var(--card-padding);
     display: none;
+    animation: showMenu 400ms ease forwards;
+  }
+
+  @keyframes showMenu {
+    to{
+      left: 0;
+    }
   }
 
 aside .logo{
@@ -661,7 +682,7 @@ main .recent-orders table{
  .right .top .theme-toggler{
  width: 4.4rem;
  position: absolute;
- left: 77%;
+ left: 70%;
 }
 
 .right .profile .info{
@@ -682,3 +703,32 @@ main .recent-orders table{
 }
 
 /* ======================= END OF SMALL TABLETS MEDIA QUERIES ========================= */
+ @media screen and (max-width: 532px){
+  .right .top .theme-toggler{
+    width: 4.4rem;
+    position: absolute;
+    left: 77%;
+   }
+  } 
+ @media screen and (max-width: 350px){
+  .right .top .theme-toggler{
+    width: 4.4rem;
+    position: absolute;
+    left: 60%;
+   }
+  } 
+ @media screen and (max-width: 490px){
+  .right .top .theme-toggler{
+    width: 4.4rem;
+    position: absolute;
+    left: 69%;
+   }
+  } 
+ @media screen and (max-width: 356px){
+  .right .top .theme-toggler{
+    width: 4.4rem;
+    position: absolute;
+    left: 60%;
+   }
+  } 
+ 
